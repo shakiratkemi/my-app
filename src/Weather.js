@@ -5,13 +5,14 @@ import "./Weather.css";
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   function handleResponse(response) {
+    console.log(response.data);
     setWeatherData({
       ready: true,
       temperature: response.data.main.temp,
       humidity: response.data.main.humidity,
       date: "Friday 11:00",
       description: response.data.weather[0].description,
-      iconUrl: "https://ssl.gstatic.com/onebox/weather/64/moderate_rain.png",
+      iconUrl: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       wind: response.data.wind.speed,
       city: response.data.name,
     });
@@ -63,7 +64,7 @@ export default function Weather(props) {
             <ul>
               <li>Precipitation: 7%</li>
               <li>Humidity: {weatherData.humidity}%</li>
-              <li>Wind: {weatherData.wind} km/hr</li>
+              <li>Wind: {Math.round(weatherData.wind)} km/hr</li>
             </ul>
           </div>
         </div>
@@ -71,7 +72,6 @@ export default function Weather(props) {
     );
   } else {
     const apiKey = "e1a1e984ddfbd4c270b900f1212c4a45";
-    //let city = "Lagos";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
   }
