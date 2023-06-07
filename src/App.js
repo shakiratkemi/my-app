@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <div className="container">
-        <Weather defaultCity="Abuja" />
+        <Weather defaultCity="Lagos" />
         <footer>
           This is coded by Shakirat Adeyemi and it is{" "}
           <a
