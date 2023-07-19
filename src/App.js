@@ -13,9 +13,12 @@ function App() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            open-sourced{" "}
+            open-sourced on GitHub{" "}
           </a>
-          on GitHub.
+          and hosted on{" "}
+          <a href="https://" target="_blank" rel="noopener noreferrer">
+            Netlify.
+          </a>
         </footer>
       </div>
     </div>
