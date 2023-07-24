@@ -11,3 +11,14 @@
 .App footer a {
   text-decoration: none;
 }
+
+.container {
+  border-radius: 20px;
+  box-shadow: 0 3px 3px 3px #2a5298;
+}
+
+@media (max-width: 600px) {
+  .footer {
+    font-size: 12px;
+  }
+}
