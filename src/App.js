@@ -16,7 +16,11 @@ function App() {
             open-sourced on GitHub{" "}
           </a>
           and hosted on{" "}
-          <a href="https://" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://heroic-cannoli-f7a8ef.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Netlify.
           </a>
         </footer>
