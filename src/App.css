@@ -6,6 +6,7 @@
 .App footer {
   font-size: 10px;
   margin: 10px 0;
+  text-align: center;
 }
 
 .App footer a {
@@ -15,10 +16,4 @@
 .container {
   border-radius: 20px;
   box-shadow: 0 3px 3px 3px #2a5298;
-}
-
-@media (max-width: 600px) {
-  .footer {
-    font-size: 12px;
-  }
 }
